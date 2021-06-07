@@ -781,4 +781,21 @@ button:focus,
     .profile-img {
         display: none;
     }
+
+    .social-icon:before {
+        content: attr(data-label);
+        font-size: 13px;
+        margin: 0 0 10px;
+        line-height: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .social-icon li {
+        display: block;
+    }
+    .social-icon li a {
+        border: none;
+        width: auto;
+        text-align: left;
+    }
 }
