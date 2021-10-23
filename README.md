@@ -1,2 +1,2 @@
 ### My personal website
-www.marcussousa.com
+www.marcussousa.dev.br
