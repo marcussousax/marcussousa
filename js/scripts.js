@@ -3,13 +3,19 @@ jQuery(function ($) {
     'use strict';
 
     (function () {
-        let ButtonTheme = document.getElementById("btn-change-theme")
+
+        const THEME = {
+            LIGHT: 'light-mode',
+            DARK: 'dark-mode'
+        }
+
+        const ButtonTheme = document.getElementById("btn-change-theme")
         $('#preloader').delay(200).fadeOut('slow');
 
         function checkIfThemeIsInLocalStorage() {
-            let html = document.documentElement
-            let currentTheme = localStorage.getItem("theme") || "light-mode"
-            if(currentTheme === "light-mode") {
+            const html = document.documentElement
+            const currentTheme = localStorage.getItem("theme") || THEME.LIGHT
+            if (currentTheme === THEME.LIGHT) {
                 ButtonTheme.innerText = "dark mode"
             } else {
                 ButtonTheme.innerText = "light mode"
@@ -19,16 +25,16 @@ jQuery(function ($) {
         }
 
         function toggleTheme() {
-            let html = document.documentElement
-            let currentTheme = document.documentElement.getAttribute('theme')
-            if (currentTheme === "dark-mode") {
-                html.setAttribute('theme', 'light-mode')
+            const html = document.documentElement
+            const currentTheme = document.documentElement.getAttribute('theme')
+            if (currentTheme === THEME.DARK) {
+                html.setAttribute('theme', THEME.LIGHT)
                 ButtonTheme.innerText = 'dark mode'
-                localStorage.setItem('theme', 'light-mode');
+                localStorage.setItem('theme', THEME.LIGHT);
             } else {
-                html.setAttribute('theme', 'dark-mode')
+                html.setAttribute('theme', THEME.DARK)
                 ButtonTheme.innerText = 'light mode'
-                localStorage.setItem('theme', 'dark-mode');
+                localStorage.setItem('theme', THEME.DARK);
             }
         }
 
