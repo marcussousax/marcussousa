@@ -39,7 +39,6 @@ body {
     font-family: 'Hind', sans-serif;
     font-size: 15px;
     line-height: 1.8em;
-    color: #989898;
     font-weight: 300;
     background: #f8f8f8;
 }
@@ -815,4 +814,12 @@ button:focus,
         width: auto;
         text-align: left;
     }
+}
+
+html[theme='dark-mode'] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html[theme='dark-mode'] img{
+    filter: invert(1) hue-rotate(180deg);
 }
