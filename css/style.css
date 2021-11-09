@@ -820,6 +820,15 @@ html[theme='dark-mode'] {
     filter: invert(1) hue-rotate(180deg);
 }
 
-html[theme='dark-mode'] img{
+html[theme='dark-mode'] img {
     filter: invert(1) hue-rotate(180deg);
 }
+
+.toggle-theme {
+    border: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 20px;
+    border-radius: 5px;
+}
+
