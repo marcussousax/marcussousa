@@ -831,4 +831,8 @@ html[theme='dark-mode'] img {
     line-height: 20px;
     border-radius: 5px;
 }
-
+@media print {
+    .toggle-theme {
+        display: none;
+    }
+}
